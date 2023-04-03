@@ -32,6 +32,7 @@ class UsersController < ApplicationController
         mail = PaymentMailer.new_payment(user)
         mail.deliver_now 
         render json: user, status: :ok
+        #testing
     end
 
 
