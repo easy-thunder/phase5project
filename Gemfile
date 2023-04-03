@@ -51,8 +51,8 @@ gem "active_model_serializers", "~> 0.10.13"
 
 gem 'rack-cors'
 
-gem 'dotenv-rails'
-gem 'shrine', '~> 3.3'
+# gem 'dotenv-rails'
+# gem 'shrine', '~> 3.3'
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
 gem "jsonapi-serializer", "~> 2.2"
 gem 'stripe'
