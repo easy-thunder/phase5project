@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :config, only:[:index]
   # resources :payment_intent, only:[:create]
-  post '/webhooks', to: "webhooks#create"
+  # post '/webhooks', to: "webhooks#create"
   post '/create_payment_intent', to: "payment_intent#create_payment_intent"
 
   # get '/secret', to: "payment_intent#secret"
