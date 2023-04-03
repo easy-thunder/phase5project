@@ -71,8 +71,6 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.1)
-      public_suffix (>= 2.0.2, < 6.0)
     bcrypt (3.1.18)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -80,18 +78,11 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.2.2)
-    content_disposition (1.0.0)
     crass (1.0.6)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
-    down (5.4.0)
-      addressable (~> 2.8)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -123,6 +114,8 @@ GEM
     msgpack (1.6.1)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -136,7 +129,6 @@ GEM
     nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.6)
-    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -179,9 +171,6 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
-    shrine (3.4.0)
-      content_disposition (~> 1.0)
-      down (~> 5.1)
     sinatra (3.0.5)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
@@ -193,6 +182,7 @@ GEM
     timeout (0.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.12.1)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -206,14 +196,13 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   debug
-  dotenv-rails
   image_processing (~> 1.12, >= 1.12.2)
   jsonapi-serializer (~> 2.2)
+  net-http
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4, >= 7.0.4.2)
-  shrine (~> 3.3)
   sinatra
   stripe
   tzinfo-data

@@ -57,4 +57,5 @@ gem 'image_processing', '~> 1.12', '>= 1.12.2'
 gem "jsonapi-serializer", "~> 2.2"
 gem 'stripe'
 gem "sinatra"
+gem "net-http"
 
