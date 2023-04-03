@@ -20,6 +20,7 @@ get"/admins/:email/:password", to: "admin#show"
 
   post "/login", to: "sessions#create"
 
+  get "/users/:id/confirm_payment", to: "users#confirm_payment"
 
 
 

@@ -2,8 +2,13 @@ import { useEffect } from "react"
 
 
 
-function Confirmation({setCart, cart}){
-    
+function Confirmation({setCart, user, cart}){
+
+    useEffect(()=>{
+     fetch(`/users/${user.id}/confirm_payment`)
+     .then(r=>r.json())
+     .then(data=>console.log(data))
+    },[])
 
    useEffect(()=>{
     cart.map(itemObject=>{
@@ -11,7 +16,9 @@ function Confirmation({setCart, cart}){
         .then(r=>{if(r.ok){r.json().then(setCart(()=>[]))}})
     })
     
-   },[cart])
+},[cart])
+
+
 
 
     return<div className="marginTopSome blue">

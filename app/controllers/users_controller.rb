@@ -27,7 +27,12 @@ class UsersController < ApplicationController
         render json: User.all, status: :ok
     end
 
-
+    def confirm_payment 
+        user = User.find_by(id: params[:id])
+        mail = PaymentMailer.new_payment(user)
+        mail.deliver_now 
+        render json: user, status: :ok
+    end
 
 
     private 

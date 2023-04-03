@@ -1,5 +1,4 @@
 class PaymentMailer < ApplicationMailer
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -8,7 +7,7 @@ class PaymentMailer < ApplicationMailer
   def new_payment(user)
     @user = user
 
-    mail to: "jakediehl17@gmail.com"
+    mail to: "jakediehl17@gmail.com",
         subject: "New Purchase from #{user.email}"
   end
 end

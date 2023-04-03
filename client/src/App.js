@@ -213,9 +213,7 @@ function turnOffDark(){
 
 
     </Switch>
-      <Route exact path = {`/confirm`} >
-        <Confirmation user={user} setCart={setCart} cart={cart} />
-      </Route>
+    
 
 
     
@@ -226,7 +224,10 @@ function turnOffDark(){
         <Route exact path ={`/reviewAndSubmit/${user.id}`}>
           <ReviewAndSubmit user={user} events={events} formCurrent={formCurrent} setEvents={setEvents} startingCost={startingCost} monthlyCost={monthlyCost} />
         </Route>
-
+        
+        <Route exact path = {`/confirm`} >
+        <Confirmation user={user} setCart={setCart} cart={cart} />
+      </Route>
 
 
 
