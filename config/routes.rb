@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 get "/supports/:user_id", to: "supports#index"
 get"/admins/:email/:password", to: "admin#show"
 
+get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
+
 
   post "/login", to: "sessions#create"
 
