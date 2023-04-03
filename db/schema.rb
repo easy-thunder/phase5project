@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_30_191627) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_03_192533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,15 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_191627) do
     t.float "price"
     t.text "not_included_in_form"
     t.string "page_type"
-  end
-
-  create_table "main_images", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.text "main_image_use"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_main_images_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -137,7 +128,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_191627) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "main_images", "users"
   add_foreign_key "supports", "users"
   add_foreign_key "user_services", "services"
   add_foreign_key "user_services", "users"
