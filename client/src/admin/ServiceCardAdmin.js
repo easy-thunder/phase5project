@@ -53,7 +53,7 @@ function ServiceCardAdmin({service, handleChange}){
     }
 
 
-    return(<div className={``} >
+    return(<div className={`blackText`} >
 <h1>pages {service.pages}</h1>
 <h3>name: {service.name}</h3>
         <img  src={service.poster_url} alt={service.name}  className="center imageThumb"/>

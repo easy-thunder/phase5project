@@ -198,7 +198,7 @@ form{
 
 .card:hover{
   scale: 1.1;
-  animation: colorful 4s linear forwards;
+  animation: colorful 2s linear forwards;
   filter:grayscale(0%);
   /* position: sticky; */
   z-index: 10000000;
@@ -258,6 +258,7 @@ overflow-y: scroll;
   flex-wrap: wrap;
   aspect-ratio: 3/3;
   width: 25%;
+  cursor: pointer;
   min-height: 10em;
   max-height: 60em; 
   border-radius: 15%;
@@ -274,6 +275,7 @@ overflow-y: scroll;
   display: flexbox;
   flex-wrap: wrap;
   z-index: 1000000;
+  cursor: pointer;
 
 
   aspect-ratio: 3/3;

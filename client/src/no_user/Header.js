@@ -113,7 +113,7 @@ else{alert("passwords don't match")}
     <div className={`sticky pointer  zHigh header hamburger ${logoSide? "logoMenu":null} `}>
 <div className= {`sticky margin ${logoSide? "logoMenu":null}`}  >
 
-        <img src={finalLogoForSite} className={`logo pointer`} onClick={handleHamburger}/>
+        <img src={finalLogoForSite} className={`logo zHigh pointer`} onClick={handleHamburger}/>
 </div>
 
 <div className={`${logoSide? "logoMenu ":null}`} >

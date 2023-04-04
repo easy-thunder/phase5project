@@ -46,7 +46,7 @@
   filter: drop-shadow(0 0 2em #646cff);
 }
 .logoSide{
-  display: block;
+  display:block;
 }
 .marginLeft{
   margin-left: 2em;
@@ -57,7 +57,7 @@
   float:left!important;
   flex-direction: column!important;
   left: 0px !important;
-  z-index: 99999999999999999999;
+  z-index: 9999999;
 }
 .topDown{
   margin-top: 30%;

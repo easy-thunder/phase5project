@@ -67,7 +67,9 @@ function About(){
                 <div className="divForSideScroll yellow largerText">
                 <p className="sideCenter ">
                     I continue to grow. Soon I will be able to implement 3d renders, and am working with AWS!</p></div>
-         
+         <form>
+            <input type='' />
+         </form>
 
                 </div>
         <div className="contentRight">
