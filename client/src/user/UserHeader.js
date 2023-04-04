@@ -60,10 +60,10 @@ setHamburger(hamburger=>!hamburger)
 <div className={`${logoSide? "logoMenu ":null}`} >
 
         <div className={`${logoSide? "logoMenu":null}`}>
-    
-<br/>
-<br/>
-<br/>
+
+
+
+
 <NavLink to={`/`} >
 
 <button onClick={signOut}>sign out </button>

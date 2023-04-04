@@ -248,6 +248,14 @@ overflow-y: scroll;
   border-radius: 15%;
   overflow: hidden;
 }
+.noCursor{
+  pointer-events: none ;
+}
+
+
+.border{
+  border: solid red;
+}
 @media (30em>width){
 
   .card{

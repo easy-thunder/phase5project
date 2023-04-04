@@ -57,7 +57,8 @@
   float:left!important;
   flex-direction: column!important;
   left: 0px !important;
-  z-index: 9999999;
+  z-index: 9999;
+  margin-top: 4%;
 }
 .topDown{
   margin-top: 30%;
