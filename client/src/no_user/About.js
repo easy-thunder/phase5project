@@ -3,7 +3,7 @@ import digitalTree from "../assets/digitalTreeGrowth.png"
 import raftingJake from "../assets/raftingUnderBridge.jpg"
 function About(){
     return(<div className="blackFadeToWhite fullHeight">
-        <div className="topContainer"  >
+        <div className="topContainer red"  >
 
         <div className="contentRight">
         <img className="profileImageContent center" src={fancyJake} alt="jake at dinner Party" />
@@ -20,7 +20,7 @@ function About(){
 
 <h1 className=" largerText">How I can Cultivate your digital network!</h1>
 </div>
-<div className="topContainer noEffect">
+<div className="topContainer green noEffect">
 <div></div>
 <div className="contentLeft  height50 solid">
                 <div className="divForSideScroll largerText blue">
@@ -74,7 +74,7 @@ function About(){
             <img className="profileImageContent center" src={digitalTree} />
         </div>
         </div>
-        <div className="topContainer"  >
+        <div className="topContainer blue"  >
 
 <div className="contentRight">
 <img className=" center" src={raftingJake} alt="jake at dinner Party" />
