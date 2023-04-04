@@ -45,14 +45,14 @@ setHamburger(hamburger=>!hamburger)
 
     return(
        hamburger ? 
-       <div className={`sticky pointer hamburger ${logoSide? "logoSide":null}`}>
+       <div className={`sticky zHigh pointer hamburger ${logoSide? "logoSide":null}`}>
 
         <img src={finalLogoForSite} className="logo" onClick={handleHamburger}/>
         
        </div>
 
 :
-<div className={`sticky header hamburger ${logoSide? "logoMenu":null} `}>
+<div className={`sticky header zHigh hamburger ${logoSide? "logoMenu":null} `}>
 <div className= {`sticky margin ${logoSide? "logoMenu":null}`}  >
 
         <img src={finalLogoForSite} className={`logo pointer`} onClick={handleHamburger}/>
