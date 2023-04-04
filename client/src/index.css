@@ -324,6 +324,9 @@ height:max-content;
   animation: fadeIn 4s linear forwards;
 
 }
+input[type=submit]{
+  cursor: pointer;
+}
 
 .rainbowText{
   font-family: sans-serif;
@@ -332,6 +335,7 @@ height:max-content;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .fullHeight{
   height: 100vh;

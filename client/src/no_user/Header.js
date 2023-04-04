@@ -102,7 +102,7 @@ else{alert("passwords don't match")}
            hamburger ? 
        <div className={`sticky zHigh pointer hamburger ${logoSide? "logoSide":null}`}>
 
-        <img src={finalLogoForSite} className="logo" onClick={handleHamburger}/>
+        <img src={finalLogoForSite} className="pointer logo" onClick={handleHamburger}/>
         
        </div> :
 
