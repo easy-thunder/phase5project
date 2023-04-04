@@ -72,7 +72,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   Rails.application.routes.default_url_options = {
-  host: 'http://localhost:3000'
+  host: 'https://phase5project.onrender.com'
 }
 
   # Use a different logger for distributed setups.
@@ -96,7 +96,8 @@ Rails.application.configure do
     user_name: Rails.application.credentials[:GMAIL_USERNAME],
     password: Rails.application.credentials[:GMAIL_PASSWORD]
   }
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.default_url_options = {host: 'https://phase5project.onrender.com'
+  }
 
 
   # Do not dump schema after migrations.
