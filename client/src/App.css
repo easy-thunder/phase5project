@@ -238,6 +238,7 @@ overflow-y: scroll;
   display: flexbox;
   flex-wrap: wrap;
 
+
   aspect-ratio: 3/3;
   height: 50%;
 
@@ -261,6 +262,7 @@ overflow-y: scroll;
   max-height: 60em; 
   border-radius: 15%;
   overflow: hidden;
+   z-index: 1000000;
 }
 }
 @media (30em<width) {
@@ -271,6 +273,8 @@ overflow-y: scroll;
     border: solid rgb(255, 0, 0);
   display: flexbox;
   flex-wrap: wrap;
+  z-index: 1000000;
+
 
   aspect-ratio: 3/3;
   height: 50%;
