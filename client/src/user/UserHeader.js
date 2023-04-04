@@ -45,7 +45,7 @@ setHamburger(hamburger=>!hamburger)
 
     return(
        hamburger ? 
-       <div className={`sticky hamburger ${logoSide? "logoSide":null}`}>
+       <div className={`sticky pointer hamburger ${logoSide? "logoSide":null}`}>
 
         <img src={finalLogoForSite} className="logo" onClick={handleHamburger}/>
         
