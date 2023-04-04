@@ -30,7 +30,7 @@ function purchaseWithForm(e){
 
 
     function showDetails(){
-            if(service.name==="Static Site" || service.name==="dynamic site"){
+            if(service.name==="Full Stack Site" || service.name==="Frond End Site"){
                 setHidden(()=>false)
             }
             else{
