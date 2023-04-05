@@ -10,6 +10,7 @@ const [signInHidden, setSignInHidden] = useState(true)
 const [signUpHidden, setSignUpHidden] = useState(true)
 const [hamburger, setHamburger] = useState(true)
 const [logoSide, setLogoSide]=useState(false)
+const [adminSignUpHidden, setAdminSignUpHidden] = useState(true)
 useEffect(()=>{
         if(logoSide===false && scrollTop>500){
            return setLogoSide(logoSide=>!logoSide)
@@ -50,13 +51,11 @@ const password=e.target.password.value
       body: JSON.stringify({ email, password }),
     }).then((r) => {
       if (r.ok) {
+
         r.json().then((user) => {setUser(user)
             history.push(`/`)
         });
       } 
-      // else {
-      //   r.json().then((err) => setErrors(err.errors));
-      // }
     });
   }
 
@@ -95,6 +94,36 @@ else{alert("passwords don't match")}
 
 }
 
+function hideAdminSignUp(){
+    setAdminSignUpHidden(hidden => !hidden)
+}
+
+function adminSignUp(e){
+e.preventDefault()
+const admin={
+    email: e.target.adminEmail.value,
+    password: e.target.adminPassword.value,
+    admin: true
+}
+
+fetch("/signup", {
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json",
+    },
+    body: JSON.stringify(admin),
+}).then((r) => {
+    if (r.ok) {
+    r.json().then((user) => {setUser(user)
+    history.push(`/`)}
+    );
+    } 
+}
+
+
+)
+}
+
 
 
     return(
@@ -128,6 +157,8 @@ else{alert("passwords don't match")}
 
 
 
+
+
 <NavLink to={`/`} exact >
 <button >home</button>
 </NavLink>       
@@ -139,7 +170,7 @@ else{alert("passwords don't match")}
      
 
         <button onClick={hideSignUp}>sign up</button>
-        
+        <button onClick={hideAdminSignUp}>adminSignUp</button>
 
         {signInHidden ? null: 
             <div>
@@ -167,6 +198,16 @@ else{alert("passwords don't match")}
             </form>
              </div>
             }
+            {adminSignUpHidden ? null: <div>
+                <form onSubmit={adminSignUp}>
+                    <input type='email' placeholder="email" id="adminEmail" />
+                    <br /> 
+                    <input type="password" placeholder="password" id="adminPassword" />
+                    <br/>
+                    <input type='submit' />
+                </form>
+                </div>
+                }
 
             </div>
             </div>

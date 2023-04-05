@@ -16,13 +16,9 @@ import PageDetailsForm from './FormStuff/PageDetailsForm';
 import ReviewAndSubmit from './FormStuff/ReviewAndSubmit';
 import ViewUsers from './admin/viewUsers';
 import Confirmation from './user/ConfirmationPage';
-import AdminLogin from './admin/AdminLogin';
 
 
-// Make sure to call loadStripe outside of a component’s render to avoid
-// recreating the Stripe object on every render.
-// This is your test publishable API key.
-// const stripePromise = loadStripe("pk_test_51MTKZtAdCijzaWdM7uAcQjk0D0O0cm7N3urEryvD5DO2kYniJ5uKNPDoqGdUtuU4bQWkAGtWRNgmDJ4Zw84udlJw00Ko0TenWC");
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -196,27 +192,6 @@ function turnOffDark(){
         
       </div> */}
 
-  
-    
-
-    <Switch>
-      <Route exact path = '/admin/pasjdpofjaslkdjfp9wijef9foilkdfw' >
-        <AdminHome setServices = {setServices} services = {services}/>
-      </Route>
-      <Route exact path = '/admin/lakwsjsd9fpaoisjdfijjajsldkdjflasdfjkhaksiddf'>
-        <ViewUsers />
-      </Route>
-      <Route exact path = '/admin/opsjfdklajsjldkfflakjshjdioufh' >
-        <AdminLogin setServices = {setServices} services = {services}/>
-      </Route>
-
-
-
-    </Switch>
-    
-
-
-    
     { user ? 
     <div>
     <UserHeader setEvents={setEvents} scrollTop={scrollTop} user={user} setUser={setUser} setCart={setCart} setFormCurrent={setFormCurrent}/>
@@ -224,9 +199,16 @@ function turnOffDark(){
         <Route exact path ={`/reviewAndSubmit/${user.id}`}>
           <ReviewAndSubmit user={user} events={events} formCurrent={formCurrent} setEvents={setEvents} startingCost={startingCost} monthlyCost={monthlyCost} />
         </Route>
-        
+
         <Route exact path = {`/confirm`} >
         <Confirmation user={user} setCart={setCart} cart={cart} />
+      </Route>
+
+      <Route exact path = {`/admin/pasjdpofjaslkdjfp9wijef9foilkdfw`} >
+        <AdminHome user={user} setServices = {setServices} services = {services}/>
+      </Route>
+      <Route exact path = '/admin/lakwsjsd9fpaoisjdfijjajsldkdjflasdfjkhaksiddf'>
+        <ViewUsers user={user} />
       </Route>
 
 

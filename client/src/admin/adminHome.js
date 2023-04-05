@@ -2,8 +2,7 @@ import ServiceCardAdmin from "./ServiceCardAdmin"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-function AdminHome({services, setServices}){
-    // console.log(services)
+function AdminHome({services, setServices, user}){
     const [poster, setPoster] = useState(null)
     const [name, setName] = useState('')
     const [initialPrice, setInitialPrice]=useState('')
@@ -12,7 +11,7 @@ function AdminHome({services, setServices}){
     const [recurringFee, setRecurringFee]=useState(false)
     const [description, setDescription]=useState('')
     const [details, setDetails]=useState('')
-    
+    console.log(user)
 
 
     function handleChange(){
@@ -53,12 +52,16 @@ function AdminHome({services, setServices}){
 
 
 
-    return(<div className={`marginTopSome`}>
+    return(
+    
+    <div className={`marginTopSome`}>
         <NavLink to={`/admin/lakwsjsd9fpaoisjdfijjajsldkdjflasdfjkhaksiddf`} exact>
 
         <button>viewUsers</button>
         </NavLink>
         <h1>create a new service</h1>
+
+        {user.admin? 
         <form onSubmit={newService}>
             <input type="text" placeholder="name" onChange={(e)=>setName(e.target.value)}  />
             <br />
@@ -82,12 +85,13 @@ function AdminHome({services, setServices}){
             <br />
             <input className="pointer" type='submit'/>
         </form>
-        {services.map(service =><ServiceCardAdmin setServices={setServices} service={service} key={service.id} handleChange={handleChange}/>)}
+               :null}
 
+        { user.admin? services.map(service =><ServiceCardAdmin setServices={setServices} service={service} key={service.id} handleChange={handleChange}/>):null}
+    </div>
+    
+    )
 
-
-
-    </div>)
 }
 
 
