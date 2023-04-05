@@ -12,13 +12,13 @@ class AdminsController < ApplicationController
     def show 
         admin = Admin.find_by!(email:params[:email])
         if Rails.application.credentials[:admin_key]==params[:password]
-            render json: admin, status: :ok
+            render json: {key: "lksfapospokdjflklkksdkldsfkllkskk"}, status: :ok
         end
     end
 
     private 
     def admin_params
-        params.permit(:password, :key, :email, :admin)
+        params.permit(:password, :email)
     end
 end
 

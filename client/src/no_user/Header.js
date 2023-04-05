@@ -10,7 +10,6 @@ const [signInHidden, setSignInHidden] = useState(true)
 const [signUpHidden, setSignUpHidden] = useState(true)
 const [hamburger, setHamburger] = useState(true)
 const [logoSide, setLogoSide]=useState(false)
-const [adminSignUpHidden, setAdminSignUpHidden] = useState(true)
 useEffect(()=>{
         if(logoSide===false && scrollTop>500){
            return setLogoSide(logoSide=>!logoSide)
@@ -94,9 +93,7 @@ else{alert("passwords don't match")}
 
 }
 
-function hideAdminSignUp(){
-    setAdminSignUpHidden(hidden => !hidden)
-}
+
 
 function adminSignUp(e){
 e.preventDefault()
@@ -170,7 +167,6 @@ fetch("/signup", {
      
 
         <button onClick={hideSignUp}>sign up</button>
-        <button onClick={hideAdminSignUp}>adminSignUp</button>
 
         {signInHidden ? null: 
             <div>
@@ -198,17 +194,6 @@ fetch("/signup", {
             </form>
              </div>
             }
-            {adminSignUpHidden ? null: <div>
-                <form onSubmit={adminSignUp}>
-                    <input type='email' placeholder="email" id="adminEmail" />
-                    <br /> 
-                    <input type="password" placeholder="password" id="adminPassword" />
-                    <br/>
-                    <input type='submit' />
-                </form>
-                </div>
-                }
-
             </div>
             </div>
     </div>)

@@ -10,6 +10,7 @@ textarea{
 }
 form{
   background-color: rgba(138, 37, 138, 0.336);
+  color: black
 }
 .center {
   display: block;
