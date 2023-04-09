@@ -9,8 +9,17 @@ textarea{
   border-radius: 2em;
   color: black;
 }
+
 .fullScreen{width: 100vw; height: 100vh;}
 input{color:black;}
+input[type="text"], input[type="number"]{
+  border-radius: 1em;
+}
+.messages{
+  scale: 1.2;
+  border-radius: 1em;
+}
+
 label{color: white}
 submit{color: white}
 form{
@@ -229,6 +238,21 @@ max-width: 60em;
 border-radius: 15%;
 overflow-y: scroll;
 }
+
+*::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 0, 204, 0.462);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(106, 255, 0, 0.4);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(149, 255, 0);  /* creates padding around scroll thumb */
+}
+
 
 
 

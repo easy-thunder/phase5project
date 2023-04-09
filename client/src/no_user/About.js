@@ -10,7 +10,7 @@ function About(){
         </div>
         <div className="content">
             <h1 className="largerText">Meet the team!</h1>
-            <p>It's just me! Hi, I'm Jake, a free-lance web developer. All my life I've been an over achiever. Whether it was setting records in sports, earning over fifty five star reviews, or making the deans list five times I always go above and beyond. I constantly push myself to learn new skills to implement in my clients sites. I'm excited to cultivate the ultimate user experience into your new site!  </p>
+            <p>It's just me! Hi, I'm Jake, a free-lance web developer. All my life I've been an over achiever. Whether it was setting records in sports, earning over fifty five star reviews, or making the deans list five times I always go above and beyond. I constantly push myself to learn new skills to implement in my clients sites. I'm excited to cultivate the ultimate user experience into your new website!  </p>
         </div>
 
 
@@ -18,7 +18,7 @@ function About(){
 </div>
 <div className="width50 marginLeftMore">
 
-<h1 className=" largerText">How I can Cultivate your digital network!</h1>
+<h1 className=" largerText  blackText">How I can Cultivate your digital network!</h1>
 </div>
 <div className="topContainer green noEffect">
 <div></div>
@@ -83,7 +83,7 @@ function About(){
 </div>
 <div className="content">
     <h1 className="largerText">History and hobbies</h1>
-    <p>Biologist turned software engineer! I enjoy learning about the interactions in our psychophysiology almost as much as I enjoy displaying my creativity through websites!  </p>
+    <p>Biologist turned software engineer! I enjoy learning about the interactions in our psychoneuroendocrinology almost as much as I enjoy displaying my creativity through websites!  </p>
     <br />
     <p> I am a white water rafting guide which is where I earned over 50 five star reviews. I enjoy people and know that connection with others yields oxytocin release, the happiest currency our bodies can naturally produce!  </p>
     <br />

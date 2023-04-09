@@ -10,8 +10,7 @@ function Message({message, admin, id}){
     }
 
     return <div>
-        <h3 className={admin? "blue":"green"}>{message}</h3>
-        <button onClick={removeMessage}>delete</button>
+        <h3 className={`messages ${admin? "blue":"green"}`}>{message}</h3>
     </div>
 }
 

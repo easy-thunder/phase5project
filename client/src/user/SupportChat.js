@@ -66,8 +66,8 @@ function SupportChat({user, admin}){
         <br/>
         <form onSubmit={submitMessage}>
 
-            <input type='text' className="blackText" onChange={(e)=>setForm(()=>e.target.value)} value={form} />
-            <input className="pointer" type='submit' />
+            <input type='text' className="formInput" onChange={(e)=>setForm(()=>e.target.value)} value={form} />
+            <input className=" whiteText pointer" type='submit' />
         </form>
             </div>: null}
     </>
