@@ -30,7 +30,7 @@ function MainImageInput({user, setEvents, events}){
         }
         setEvents(()=>([...events, newMainImage
         ]))
-      });
+      }).then(e.target.reset());
     }
 
 
@@ -46,7 +46,7 @@ function MainImageInput({user, setEvents, events}){
         <input type="file" accept="image/png, image/jpeg" onChange={(e)=>setPoster(e.target.files[0])}  />  
         <br />
 
-    <p>briefly explain in under 200 characters how this main image is to be used in your site</p>
+    <p className="whiteText">briefly explain in under 200 characters how this main image is to be used in your site</p>
     <br />
 
 
@@ -54,7 +54,7 @@ function MainImageInput({user, setEvents, events}){
 
     </textarea>
     <br />
-    <input type='submit' className="pointer" />
+    <input type='submit' className="pointer whiteText" />
         </ form>
     )
 }

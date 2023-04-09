@@ -28,7 +28,7 @@ const [pageType, setPageType] = useState('')
                 setEvents(()=>([...events, newPage
                 ]))
                 
-            });
+            }).then(e.target.reset());
     }
     return(
         <form className=""  onSubmit={makeNewPage}>
@@ -52,7 +52,7 @@ const [pageType, setPageType] = useState('')
     <textarea onChange={(e)=>setImageUse(e.target.value)}></textarea>
 
     <br />
-        <input type='submit' className="pointer" />
+        <input type='submit' className="pointer whiteText" />
         </ form>    
     )
 }

@@ -1,10 +1,9 @@
 import { NavLink, useHistory } from "react-router-dom"
 import PageInfo from "../user/PageInfo"
 import { useState } from "react"
-import PageDemo from "./PageDemo"
 
 
-function PageDetailsForm({user, setEvents, events, formCurrent, setFormCurrent}){
+function PageDetailsForm({user, setEvents, events,  setUser}){
     const history = useHistory()
     const [page, setPage] = useState(false)
     function showPage(){
@@ -13,7 +12,7 @@ function PageDetailsForm({user, setEvents, events, formCurrent, setFormCurrent})
     function additionalInformation(e){
         e.preventDefault()
         const formUpdate={
-            ...formCurrent,
+            ...user,
             additional_form_details: e.target.notIncludedOnForm.value
         }
         fetch(`/users/${user.id}`,{method:"PATCH",
@@ -22,10 +21,10 @@ function PageDetailsForm({user, setEvents, events, formCurrent, setFormCurrent})
     })
     .then(r=>{
         if(r.ok){r.json().then(
-            history.push(`/reviewAndSubmit/${user.id}`)
+            // history.push(`/reviewAndSubmit/${user.id}`)
+            setUser(()=>formUpdate)
             )}
-    })
-    setFormCurrent(()=>formUpdate)
+    }).then(e.target.reset())
     }
 
 
@@ -41,26 +40,19 @@ function PageDetailsForm({user, setEvents, events, formCurrent, setFormCurrent})
 
 
             <br></br>
-            {events.map(event => <PageDemo setEvents={setEvents} events={events}  event={event} key={event.id} />)}
             <br />
             <label>additional details</label>
             <br />
             <form onSubmit={additionalInformation}>
 
-            <textarea id='notIncludedOnForm' placeholder={formCurrent.additional_form_details ? formCurrent.additional_form_details :`ie. I want action cable to be able to connect users to other users. Or I want action cable to connect directly too my staff, or I want action emailer to automatically send emails too me and too my customer with xyz message."id="additionalDetails`}></textarea>
+            <textarea id='notIncludedOnForm' placeholder={user.additional_form_details ? user.additional_form_details :`ie. I want action cable to be able to connect users to other users. Or I want action cable to connect directly too my staff, or I want action emailer to automatically send emails too me and too my customer with xyz message."id="additionalDetails`}></textarea>
             <br></br>
-            <input type="submit" className="pointer" />
+            <input type="submit" className="whiteText pointer" />
             </form>
 
 
 
-            <br />
-            <NavLink to={`/mainImages/${user.id}`}>
-            <button>back</button>
-            </NavLink>
-            <NavLink to={`/reviewAndSubmit/${user.id}`} >
-                <button>next</button>
-            </NavLink>
+
             
         </div>
     )

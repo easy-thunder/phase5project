@@ -19,16 +19,10 @@ function Cart({cart, setCart, user, startingCost, monthlyCost}){
 
 
 
-    return(<div className="marginTopSome darkBG">
-{cart.map(itemObject=><CartItem item={itemObject.service} key={itemObject.id}itemObject={itemObject} user={user} handleChange={handleChange}/>)}
-<div>
-    <h3>Website Purchase Price: {startingCost}$ </h3>
-    <h3>Monthly server fee: {monthlyCost}$</h3>
-    <NavLink to={`/purchaseForm`}>
-    <button>Purchase form</button>
-    </NavLink>
-
-</div>
+    return(<div className="marginTopSome darkBG fullScreen">
+<p>operating hours Monday through Friday 7:00a.m-5:00p.m</p>
+<p>phone: 970 582 0018</p>
+<p>email: jddiehl17@gmail.com</p>
 
     </div>)
 }

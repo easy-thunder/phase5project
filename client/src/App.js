@@ -222,12 +222,12 @@ function turnOffDark(){
       <MainImagesForm formCurrent={formCurrent} setFormCurrent={setFormCurrent} setCart={setCart} user={user} setDark={setDark} events={events} setEvents={setEvents}/>
       </Route>
       <Route exact path = {`/`}>
-        <UserHome scrollTop={scrollTop} services = {services} handleCart={handleCart} setCart={setCart} cart={cart} events={events} setEvents={setEvents} user={user}/>
+        <UserHome setUser={setUser} scrollTop={scrollTop} services = {services} handleCart={handleCart} setCart={setCart} cart={cart} events={events} setEvents={setEvents} startingCost={startingCost} monthlyCost={monthlyCost} user={user} setDark={setDark} setFormCurrent={setFormCurrent} formCurrent={formCurrent}/>
       </Route>
 
-      <Route exact path ={`/purchaseForm`}>
-        <PurchaseForm startingCost={startingCost} monthlyCost={monthlyCost} setCart={setCart} user={user} setDark={setDark} setFormCurrent={setFormCurrent} formCurrent={formCurrent}/>
-      </Route>
+      {/* <Route exact path ={`/purchaseForm`}>
+        <PurchaseForm startingCost={startingCost} monthlyCost={monthlyCost} setCart={setCart} user={user} setDark={setDark} setFormCurrent={setFormCurrent} formCurrent={formCurrent} setUser={setUser}/>
+      </Route> */}
 
       <Route exact path ={`/about`}>
       <About />

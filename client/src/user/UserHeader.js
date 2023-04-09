@@ -77,7 +77,7 @@ setHamburger(hamburger=>!hamburger)
 </NavLink>   
 
 <NavLink to={`/cart/${user.id}`} exact >
-<button>cart</button>
+<button>contact</button>
 </NavLink>   
 
 </div>

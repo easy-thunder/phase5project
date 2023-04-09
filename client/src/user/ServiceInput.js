@@ -37,7 +37,7 @@ function ServiceInput({user, setEvents, events}){
                 setEvents(()=>([...events, newService
                 ]))
                  // do something with the returned data
-                });
+                }).then(e.target.reset())
 
 
 
@@ -45,7 +45,7 @@ function ServiceInput({user, setEvents, events}){
     
     
         return(
-        <form className="" ref={serviceRef} id={`service`} onSubmit={addService}>
+        <form className="whiteText" ref={serviceRef} id={`service`} onSubmit={addService}>
             <label>Service Name</label>
             <br />
             <input type='text' onChange={(e)=>setTitle(e.target.value)} />
@@ -67,7 +67,7 @@ function ServiceInput({user, setEvents, events}){
             <textarea id={`serviceOther`} onChange={(e)=>setNot_included_in_form(e.target.value)}></textarea>
             <br></br>
             {/* <button onClick={deleteMainImage}>delete</button> */}
-            <input type="submit" className="pointer"/>
+            <input type="submit" className="pointer whiteText"/>
             </ form>
         )
     

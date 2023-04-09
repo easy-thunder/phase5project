@@ -5,9 +5,14 @@
 
 textarea{
   height:10em;
-  width: 40em;
+  width:auto;
   border-radius: 2em;
+  color: black;
 }
+.fullScreen{width: 100vw; height: 100vh;}
+input{color:black;}
+label{color: white}
+submit{color: white}
 form{
   background-color: rgba(138, 37, 138, 0.336);
   color: black
@@ -252,7 +257,21 @@ overflow-y: scroll;
 .noCursor{
   pointer-events: none ;
 }
-
+.form{
+    box-shadow: 4px 4px 8px 0 rgb(203, 66, 216);
+    display: flexbox;
+  flex-wrap: wrap;
+  /* aspect-ratio: 3/3; */
+  width: 75%;
+  min-height: 10em;
+  /* max-height: 60em;  */
+  height: fit-content;
+  border-radius: 15%;
+  
+  /* overflow:visible; */
+  
+   z-index: 1000000;
+}
 
 .border{
   border: solid red;
@@ -323,7 +342,7 @@ button::before {
 }
 button {
   border-radius: 8px;
-  box-shadow: 0 0 1em 0 rgb(216, 65, 216), ;
+  box-shadow: 0 0 1em 0 rgb(216, 65, 216) ;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -349,8 +368,9 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
+  box-shadow: none !important;
 
-  background-color: aliceblue;
+  background-color: rgb(0, 0, 0);
   transition: border-color 0.25s;
   margin: 1em;
 }
