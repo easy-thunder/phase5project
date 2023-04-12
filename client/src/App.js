@@ -40,8 +40,8 @@ function App() {
   useEffect(
     () => {
    function update (e){
-        setXMouse(e.clientX/16-1)
-        setYMouse(e.clientY/16-5)
+        setXMouse(e.clientX/16)
+        setYMouse(e.clientY/16)
     }
     document.addEventListener('mousemove', update)
     return () => {

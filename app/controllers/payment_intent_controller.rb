@@ -21,7 +21,8 @@ class PaymentIntentController < ApplicationController
 
         session = Stripe::Checkout::Session.create({
             mode: 'payment',
-            success_url: 'https://phase5project.onrender.com/confirm',
+            # success_url: 'https://phase5project.onrender.com/confirm',
+            success_url: 'http://localhost:4000/confirm',
             line_items:[{
                 price_data:{
                     unit_amount: params[:amount_to_charge],

@@ -10,7 +10,7 @@ function Message({message, admin, id}){
     }
 
     return <div>
-        <h3 className={`messages ${admin? "blue":"green"}`}>{message}</h3>
+        <h3 onClick={removeMessage} className={`messages pointer ${admin? "blue":"green"}`}>{message}</h3>
     </div>
 }
 

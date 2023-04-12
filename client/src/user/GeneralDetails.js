@@ -4,7 +4,6 @@
 function GeneralDetails({user}){
     console.log(user)
     return(<div>
-        <p>test</p>
         <p>{user.site_name}</p>
         <p>{user.phone}</p>
         <p>{user.url1}</p>
