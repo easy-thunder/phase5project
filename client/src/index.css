@@ -261,6 +261,8 @@
 
   .cardService{
     box-shadow: 4px 4px 8px 0 rgb(203, 66, 216);
+    background-color: black;
+
     filter: grayscale(99%);
     border: solid rgb(255, 0, 0);
     display: flexbox;
@@ -279,6 +281,8 @@
   
   .cardService{
     box-shadow: 4px 4px 8px 0 rgb(203, 66, 216);
+    background-color: black;
+
     filter: grayscale(99%);
     border: solid rgb(255, 0, 0);
     height:fit-content;

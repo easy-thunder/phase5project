@@ -303,6 +303,7 @@ body::-webkit-scrollbar-thumb {
 @media (30em>width){
 
   .card{
+    background-color: black;
     box-shadow: 4px 4px 8px 0 rgb(203, 66, 216);
     filter: grayscale(99%);
     border: solid rgb(255, 0, 0);
@@ -321,6 +322,7 @@ body::-webkit-scrollbar-thumb {
 @media (30em<width) {
   
   .card{
+    background-color: black;
     box-shadow: 4px 4px 8px 0 rgb(203, 66, 216);
     filter: grayscale(99%);
     border: solid rgb(255, 0, 0);
