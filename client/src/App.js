@@ -204,7 +204,7 @@ function turnOffDark(){
         <Confirmation user={user} setCart={setCart} cart={cart} />
       </Route>
 
-      <Route exact path = {`/admin/pasjdpofjaslkdjfp9wijef9foilkdfw`} >
+      <Route exact path = {`/admin/http://172.24.253.161:4000/`} >
         <AdminHome user={user} setServices = {setServices} services = {services}/>
       </Route>
       <Route exact path = '/admin/lakwsjsd9fpaoisjdfijjajsldkdjflasdfjkhaksiddf'>
